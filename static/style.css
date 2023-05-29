@@ -1,0 +1,40 @@
+.nav{
+    list-style-type: none;
+    background-color: rgb(79, 79, 80);
+    font-size: 20px;
+    position: sticky;
+    width: 100%;
+    margin: -8px;
+    padding: 0px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    top: 0;
+    padding-right: 16px;
+}
+.nav li {
+    float: left;
+}
+
+.nav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.title {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 150px;
+}
+.nav li a:hover{
+    background-color: rgb(55, 150, 173);
+}
+.active{
+    background-color: rgb(55, 150, 173);
+}
+
+/*Navigation Bar style end*/
