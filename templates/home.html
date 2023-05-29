@@ -12,21 +12,28 @@
     <div>
         navigation bar
     </div>
-
+    <form>
+        <input type="text" name="filter" placeholder="Search">
+        <input type="submit" value="search">
+    </form>
     <!--This is the Filter Bar-->
     <nav>
         <ul class="nav">
-            <li><a href="{{url_for('home', cat='main')}}">My Homepage</a></li>
+            <li class="active"><a href="{{url_for('home', cat='main')}}">Featured</a></li>
             <li><a href="{{url_for('home', cat='Attraction')}}">Attractions</a></li>
             <li><a href="{{url_for('home', cat='Food')}}">Food</a></li>
-            <li><a href="{{url_for('home', cat='Accomodation')}}">Accomodations</a></li>
+            <li><a href="{{url_for('home', cat='Accommodation')}}">Accommodations</a></li>
         </ul>
     </nav>
     <!--End of filter bar-->
+    
+
+    <div class="Recommended">Most Popular</div>
     <ul>
         {% for record in lst %}
-        <li>{{record[0]}}</li>
+        <li><a href="{{url_for('display', index=record[0])}}">{{record[1]}}</a></li>
         {% endfor %}
     </ul>
+    <div class="Itinerary">Itinerary</div>
 </body>
 </html>

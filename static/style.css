@@ -1,10 +1,8 @@
 .nav{
     list-style-type: none;
-    background-color: rgb(79, 79, 80);
     font-size: 20px;
     position: sticky;
     width: 100%;
-    margin: -8px;
     padding: 0px;
     margin-bottom: 30px;
     overflow: hidden;
@@ -13,6 +11,9 @@
 }
 .nav li {
     float: left;
+    background-color: rgb(79, 79, 80);
+    border-radius: 20px;
+    margin-left: 20px;
 }
 
 .nav li a{
@@ -32,9 +33,18 @@
 }
 .nav li a:hover{
     background-color: rgb(55, 150, 173);
+    border-radius: 20px;
 }
 .active{
     background-color: rgb(55, 150, 173);
+    border-radius: 20px;
 }
 
 /*Navigation Bar style end*/
+
+body{
+    font-family: Montserrat,Open Sans,Helvetica Neue,Arial;
+    color: rgb(107, 107, 110);
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
