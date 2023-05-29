@@ -12,15 +12,17 @@ def index():
 def home(cat):
     db = sqlite3.connect('itinerary.db')
     if cat == "main":
-        comm = "SELECT Places.PlaceIndex, Places.PlaceName FROM Places ORDER BY Places.Hit DESC"
+        comm = "SELECT Places.PlaceIndex, Places.PlaceName, Places.PlaceImg FROM Places ORDER BY Places.Hit DESC"
     else:
-        comm = "SELECT Places.PlaceIndex, Places.PlaceName FROM Places WHERE Places.Categories = '{}' ORDER BY Places.Hit DESC".format(cat)
+        comm = "SELECT Places.PlaceIndex, Places.PlaceName, Places.PlaceImg FROM Places WHERE Places.Categories = '{}' ORDER BY Places.Hit DESC".format(cat)
     lst = []
     cursor = db.execute(comm)
     data = cursor.fetchall()
     for record in data:
         lst.append(record)
     return render_template('home.html', lst=lst)
+
+@app.route('/search')
     
 @app.route('/display/<int:index>')
 def display(index):
@@ -28,7 +30,7 @@ def display(index):
     comm = "SELECT * FROM Places WHERE Places.PlaceIndex = {}".format(index)
     cursor = db.execute(comm)
     data = cursor.fetchone()
-    newHit = data[6] + 1
+    newHit = data[7] + 1
     comm= "UPDATE Places SET Hit = {} WHERE PlaceIndex = {}".format(newHit, index)
     cursor = db.execute(comm)
     db.commit()

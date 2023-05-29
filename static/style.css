@@ -1,7 +1,6 @@
-.nav{
+.filter{
     list-style-type: none;
     font-size: 20px;
-    position: sticky;
     width: 100%;
     padding: 0px;
     margin-bottom: 30px;
@@ -9,14 +8,14 @@
     top: 0;
     padding-right: 16px;
 }
-.nav li {
+.filter li {
     float: left;
     background-color: rgb(79, 79, 80);
     border-radius: 20px;
     margin-left: 20px;
 }
 
-.nav li a{
+.filter li a{
     display: block;
     color: white;
     text-align: center;
@@ -31,7 +30,7 @@
     text-decoration: none;
     width: 150px;
 }
-.nav li a:hover{
+.filter li a:hover{
     background-color: rgb(55, 150, 173);
     border-radius: 20px;
 }
@@ -47,4 +46,68 @@ body{
     color: rgb(107, 107, 110);
     font-size: 20px;
     letter-spacing: 0.5px;
+    overflow-x: hidden;
+}
+.container{
+    width:100%;
+    background-color: #85DCB8;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 12;
+    display: flex;
+    align-items: center;
+}
+h1{
+    color:#E8A87C;
+    font-size: 50px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display:inline-block;
+    margin-left: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #d31010;
+}
+
+/* bloc style */
+table img{
+    height: 200px;
+    width: 250px;
+}
+
+.bloc {
+    height: 250px;
+    width: 250px;
+    background-color: #85DCB8;
+    vertical-align: top;
+    padding: 10px;
+    border: 10px solid white;
+}
+
+.bloc a{
+    text-decoration: none;
+    color: rgb(107, 107, 110);
+}
+
+.scroll {
+    overflow: auto;
+}
+
+.search{
+    width: 90%;
+    margin: 8px;
+    padding: 10px;
+}
+
+.submit{
+    padding: 8px;
 }
