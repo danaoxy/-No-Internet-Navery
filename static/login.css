@@ -14,7 +14,7 @@
 }
 .table{
     margin: 20% auto;
-    padding: 50px;
+    padding: 5px;
     position: relative;
     vertical-align: middle;
 
@@ -51,7 +51,6 @@
 
 }
 a{
-  font-size: 50;
-  color: aqua;  
+  color: #fbe8a6de;  
 
 }

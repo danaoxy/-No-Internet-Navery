@@ -38,7 +38,8 @@
     </ul>
     <!--End of filter bar-->
     <div class="scroll">
-        Explore Destinations {{userData[1]}} {{userData}}
+        Explore Destinations <!--{{userData[1]}} {{userData}}-->
+    <!--start of filter results-->
     <table class="table">
         <tr>
             {% for record in lst %}
@@ -50,8 +51,10 @@
             {% endfor %}
         </tr>
     </table>
+    <!--end of filter results-->
     </div>
 
+    <!--the itinerary is incomplete because we do not have any records at hand-->
     <div class="Itinerary">
         Explore Itineraries
     </div>
