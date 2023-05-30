@@ -8,23 +8,24 @@
     <title>Homepage</title>
 </head>
 <body>
-
     <div class="container">
         <div class="navbar">
-            <h1>Name of website</h1>
+            <h1>Navery</h1>
             <nav>
                 <ul>
-                    <li><a href=""><img src="images/shopping-cart.png" width="30" class="cart-icon"></a></li>
-                    <li><a href=""><img src="images/heart.png" width="30" class="liked-icon"></a></li>
-                    <li><a href=""><img src="images/layout.png" width="30" class="itinerary-icon"></a></li>
-                    <li><a href=""><img src="images/user.png" width="30" class="profile-icon"></a></li>
+                    <li><a href=""><img src="..\static\images\shopping-cart.png" width="30" class="cart-icon"></a></li>
+                    <li><a href=""><img src="..\static\images\heart.png" width="30" class="liked-icon"></a></li>
+                    <li><a href=""><img src="..\static\images\timeline.png" width="30" class="itinerary-icon"></a></li>
+                    <li><a href=""><img src="..\static\images\avatar.png" width="30" class="profile-icon"></a></li>
+                    
                 </ul>
             </nav>
         </div>
 
 
     </div>
-    <form>
+
+    <form action="{{url_for('search')}}" method="POST">
         <input class="search" type="text" name="filter" placeholder="Search">
         <input class="submit" type="submit" value="search">
     </form>
@@ -37,12 +38,12 @@
     </ul>
     <!--End of filter bar-->
     <div class="scroll">
-        Explore Destinations
+        Explore Destinations {{userData[1]}} {{userData}}
     <table class="table">
         <tr>
             {% for record in lst %}
             <td class="bloc"><table>
-                <tr><td><a href="{{url_for('display', index=record[0])}}"><img src="..\static\images\{{record[2]}}" alt="USS"></a></td></tr>
+                <tr><td><a href="{{url_for('display', index=record[0])}}"><img src="..\static\images\{{record[2]}}" alt="{{record[1]}}"></a></td></tr>
                 <tr><td><a href="{{url_for('display', index=record[0])}}">{{ record[1] }}</a></td></tr>
                 <tr><td><a href="{{url_for('display', index=record[0])}}">{{ record[4] }}</a></td></tr>
             </table></td>
@@ -55,6 +56,6 @@
         Explore Itineraries
     </div>
 
-    
+
 </body>
 </html>

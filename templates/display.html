@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/static/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{data[1]}}</title>
 </head>
 <body>
     <ul>
-        <li>{{ data[1] }}</li>
-        <li>{{ data[2] }}]</li>
-        <li>{{ data[3] }}</li>
-        <li>{{ data[4] }}</li>
+        <li class="name">{{ data[1] }} </li>
+        <li class="picture">{{ data[2] }}]</li>
+        <li class="address">{{ data[3] }}</li>
+        <li class="price">{{ data[4] }}</li>
     </ul>
 </body>
 </html>

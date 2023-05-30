@@ -42,7 +42,7 @@
         <tr>
             {% for record in lst %}
             <td class="bloc"><table>
-                <tr><td><a href="{{url_for('display', index=record[0])}}"><img src="..\static\images\{{record[2]}}" alt="USS"></a></td></tr>
+                <tr><td><a href="{{url_for('display', index=record[0])}}"><img src="..\static\images\{{record[2]}}" alt="{{record[1]}}"></a></td></tr>
                 <tr><td><a href="{{url_for('display', index=record[0])}}">{{ record[1] }}</a></td></tr>
                 <tr><td><a href="{{url_for('display', index=record[0])}}">{{ record[4] }}</a></td></tr>
             </table></td>

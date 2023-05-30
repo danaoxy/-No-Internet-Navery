@@ -1,3 +1,39 @@
+/* home page */
+/* navgation bar */
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #B4DFE5;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 12;
+    display: flex;
+    align-items: center;
+}
+h1{
+    color:black;
+    font-size: 60px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display:inline-block;
+    margin-left: 20px;
+}
+/* filter bar */
 .filter{
     list-style-type: none;
     font-size: 20px;
@@ -10,9 +46,10 @@
 }
 .filter li {
     float: left;
-    background-color: rgb(79, 79, 80);
+    background-color:#F4976C ;
     border-radius: 20px;
-    margin-left: 20px;
+    margin: 0.5%;
+    width: 24%;
 }
 
 .filter li a{
@@ -31,52 +68,24 @@
     width: 150px;
 }
 .filter li a:hover{
-    background-color: rgb(55, 150, 173);
+    background-color:#FBE8A6 ;
     border-radius: 20px;
 }
 .active{
-    background-color: rgb(55, 150, 173);
+    background-color: #FBE8A6;
     border-radius: 20px;
 }
 
-/*Navigation Bar style end*/
+/*Filter style end*/
 
 body{
     font-family: Montserrat,Open Sans,Helvetica Neue,Arial;
-    color: rgb(107, 107, 110);
+    color: black;
     font-size: 20px;
     letter-spacing: 0.5px;
     overflow-x: hidden;
 }
-.container{
-    width:100%;
-    background-color: #85DCB8;
-    padding-left: 8%;
-    padding-right: 8%;
-    box-sizing: border-box;
-}
-.navbar{
-    height: 12;
-    display: flex;
-    align-items: center;
-}
-h1{
-    color:#E8A87C;
-    font-size: 50px;
-}
-nav{
-    flex: 1;
-    text-align: right;
-}
-nav ul li{
-    list-style: none;
-    display:inline-block;
-    margin-left: 20px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: #d31010;
-}
+
 
 /* bloc style */
 table img{
@@ -87,27 +96,38 @@ table img{
 .bloc {
     height: 250px;
     width: 250px;
-    background-color: #85DCB8;
+    background-color: #D2FDFF;
     vertical-align: top;
-    padding: 10px;
+    padding: 20px;
     border: 10px solid white;
 }
 
 .bloc a{
     text-decoration: none;
-    color: rgb(107, 107, 110);
+    color: black;
+    font-size: 20px;
+    text-align: center;
 }
 
 .scroll {
     overflow: auto;
+    font-size: 35px;
 }
-
+/* search bar */
 .search{
-    width: 90%;
-    margin: 8px;
-    padding: 10px;
+    width: 70%;
+    margin: 10px;
+    padding: 16px;
+    border-radius: 12px;
+    border-color: #303c6c;
 }
-
+/* search bar submit button */
 .submit{
-    padding: 8px;
+    width: 25%;
+    color: #fff;
+    font-size: 16px;
+    padding: 16px;
+    border: 0;
+    border-radius: 12px;
+    background: #303c6c;
 }
